@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lobster|VT323");
+@import url("https://fonts.googleapis.com/css?family=Lobster|Space+Mono");
 :root {
   font-size: 16px; }
 
@@ -12,13 +12,12 @@ body {
   background-size: cover;
   background-position: 50% 0;
   height: 100vh;
-  font-family: VT323, monospace;
+  font-family: 'Space Mono', monospace;
   text-align: center;
   background-attachment: fixed;
   padding: 5vh 20px; }
 
 #countdown {
-  max-width: 300px;
   width: 90vw;
   margin: 0 auto 20px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -34,6 +33,38 @@ body {
     font-weight: normal;
     font-size: 1.2rem;
     margin-bottom: 15px; }
+  #countdown .flexbox {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+  #countdown .countdownDisplay {
+    margin-top: 20px; }
+    #countdown .countdownDisplay .flexbox-item {
+      background-color: black;
+      padding: 10px; }
+      #countdown .countdownDisplay .flexbox-item .label {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed white; }
+        @media screen and (max-width: 530px) {
+          #countdown .countdownDisplay .flexbox-item .label {
+            font-size: .8rem; } }
+        @media screen and (max-width: 410px) {
+          #countdown .countdownDisplay .flexbox-item .label {
+            font-size: .5rem; } }
+      #countdown .countdownDisplay .flexbox-item .number {
+        font-size: 6rem;
+        font-weight: bold; }
+        @media screen and (max-width: 730px) {
+          #countdown .countdownDisplay .flexbox-item .number {
+            font-size: 2.5rem; } }
+        @media screen and (max-width: 530px) {
+          #countdown .countdownDisplay .flexbox-item .number {
+            font-size: 1.5rem; } }
+        @media screen and (max-width: 410px) {
+          #countdown .countdownDisplay .flexbox-item .number {
+            font-size: 1.1rem; } }
 
 .apply {
   margin: auto;

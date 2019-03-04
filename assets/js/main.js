@@ -22,11 +22,28 @@ class Countdown {
         const hoursOutput = hours - (days * 24);
         const minutes = endDate.diff(curDate, 'minutes') - (hours * 60);
         return `<p><strong>Time to apply: </strong></p>
-        <p>${years} ${years == 1 ? 'year' : 'years'}<br>
-        ${monthsOutput} ${monthsOutput == 1 ? 'month' : 'months'}<br>
-        ${daysOutput} ${daysOutput == 1 ? 'day' : 'days'}<br>
-        ${hoursOutput} ${hours == 1 ? 'hour' : 'hours'}<br>
-        ${minutes} ${minutes == 1 ? 'minute' : 'minutes'}`
+        <div class="flexbox countdownDisplay">
+            <div class="flexbox-item">
+                <div class="label">${years == 1 ? 'year' : 'years'}</div>
+                <div class="number">${years} </div>
+            </div>
+            <div class="flexbox-item">
+                <div class="label">${monthsOutput == 1 ? 'month' : 'months'}</div>
+                <div class="number"> ${monthsOutput} </div>
+            </div>
+            <div class="flexbox-item">
+                <div class="label">${daysOutput == 1 ? 'day' : 'days'}</div>
+                <div class="number">${daysOutput} </div>
+            </div>
+            <div class="flexbox-item">
+                <div class="label">${hours == 1 ? 'hour' : 'hours'}</div>
+                <div class="number">${hoursOutput} </div>
+            </div>
+            <div class="flexbox-item">
+                <div class="label">${minutes == 1 ? 'minute' : 'minutes'}</div>
+                <div class="number">${minutes} </div>
+            </div>
+        </div>`
     }
 
     render() {
