@@ -33,7 +33,7 @@ class Countdown {
         let endDateOutput = moment(this.endDate).format('MMMM Do YYYY, h:mm a')
         let output = ``;
         let countdown = this.showCountdown()
-        output += `<h3>The contest application ends on ${endDateOutput}</h3>`
+        output += `<h3>The contest application ends on <br> ${endDateOutput}</h3>`
         output += countdown;
         this.htmlContainer.innerHTML = output;
     }
