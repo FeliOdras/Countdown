@@ -13,24 +13,16 @@ class Countdown {
     showCountdown() {
         const curDate = new moment()
         const endDate = new moment(this.endDate)
-        const years = endDate.diff(curDate, 'years');
-        const months = endDate.diff(curDate, 'month');
         const days = endDate.diff(curDate, 'days');
         const hours = endDate.diff(curDate, 'hours');
-        const monthsOutput = months - (years * 12);
-        const daysOutput = days - (months * 30.5);
+        const minutes = endDate.diff(curDate, 'minutes');
+        const seconds = endDate.diff(curDate, 'seconds');
+        const daysOutput = days;
         const hoursOutput = hours - (days * 24);
-        const minutes = endDate.diff(curDate, 'minutes') - (hours * 60);
+        const minutesOutput = minutes - (hours * 60);
+        const secondsOutput = seconds - (minutes * 60);
         return `<p><strong>Time to apply: </strong></p>
         <div class="flexbox countdownDisplay">
-            <div class="flexbox-item">
-                <div class="label">${years == 1 ? 'year' : 'years'}</div>
-                <div class="number">${years} </div>
-            </div>
-            <div class="flexbox-item">
-                <div class="label">${monthsOutput == 1 ? 'month' : 'months'}</div>
-                <div class="number"> ${monthsOutput} </div>
-            </div>
             <div class="flexbox-item">
                 <div class="label">${daysOutput == 1 ? 'day' : 'days'}</div>
                 <div class="number">${daysOutput} </div>
@@ -40,8 +32,12 @@ class Countdown {
                 <div class="number">${hoursOutput} </div>
             </div>
             <div class="flexbox-item">
-                <div class="label">${minutes == 1 ? 'minute' : 'minutes'}</div>
-                <div class="number">${minutes} </div>
+                <div class="label">${minutesOutput == 1 ? 'minute' : 'minutes'}</div>
+                <div class="number">${minutesOutput} </div>
+            </div>
+            <div class="flexbox-item">
+                <div class="label">${secondsOutput == 1 ? 'second' : 'seconds'}</div>
+                <div class="number">${secondsOutput} </div>
             </div>
         </div>`
     }
@@ -55,4 +51,4 @@ class Countdown {
         this.htmlContainer.innerHTML = output;
     }
 }
-const currentCountdown = new Countdown('#countdown', '2020', '06', '03', '23', '42')
+const currentCountdown = new Countdown('#countdown', '2019', '06', '03', '23', '42')
