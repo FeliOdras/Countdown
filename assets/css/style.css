@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|VT323");
+:root {
+  font-size: 16px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: url(../images/contest.jpg);
+  background-size: cover;
+  background-position: 50% 0;
+  height: 100vh;
+  font-family: VT323, monospace; }
+
+#countdown {
+  text-align: center;
+  max-width: 300px;
+  width: 90vw;
+  margin: 5vh auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1rem; }
+  #countdown h3 {
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin-bottom: 15px; }
