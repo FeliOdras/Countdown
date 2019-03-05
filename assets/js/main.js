@@ -7,7 +7,8 @@ class Countdown {
         this.hour = hour;
         this.minute = minute;
         this.endDate = `${year}-${month}-${day} ${hour}:${minute}`;
-        setInterval(this.render(), 1000);
+        this.updateInterval = 1000;
+        this.render();
     }
 
     showCountdown() {
@@ -25,19 +26,19 @@ class Countdown {
         <div class="flexbox countdownDisplay">
             <div class="flexbox-item">
                 <div class="label">${daysOutput == 1 ? 'day' : 'days'}</div>
-                <div class="number">${daysOutput} </div>
+                <div class="number">${daysOutput}</div>
             </div>
             <div class="flexbox-item">
                 <div class="label">${hours == 1 ? 'hour' : 'hours'}</div>
-                <div class="number">${hoursOutput} </div>
+                <div class="number">${hoursOutput < 10 ? '0' : ''}${hoursOutput}</div>
             </div>
             <div class="flexbox-item">
                 <div class="label">${minutesOutput == 1 ? 'minute' : 'minutes'}</div>
-                <div class="number">${minutesOutput} </div>
+                <div class="number">${minutesOutput < 10 ? '0' : ''}${minutesOutput}</div>
             </div>
             <div class="flexbox-item">
                 <div class="label">${secondsOutput == 1 ? 'second' : 'seconds'}</div>
-                <div class="number">${secondsOutput} </div>
+                <div class="number">${secondsOutput < 10 ? '0' : ''}${secondsOutput} </div>
             </div>
         </div>`
     }
@@ -51,4 +52,4 @@ class Countdown {
         this.htmlContainer.innerHTML = output;
     }
 }
-new Countdown('#countdown', '2019', '06', '03', '23', '42')
+new Countdown('#countdown', '2019', '04', '03', '23', '42')
