@@ -44,12 +44,14 @@ class Countdown {
     }
 
     render() {
-        let endDateOutput = moment(this.endDate).format('MMMM Do YYYY, h:mm a')
-        let output = ``;
-        let countdown = this.showCountdown()
-        output += `<h3>The contest application ends on <br> ${endDateOutput}</h3>`
-        output += countdown;
-        this.htmlContainer.innerHTML = output;
+        setInterval(() => {
+            let endDateOutput = moment(this.endDate).format('MMMM Do YYYY, h:mm a')
+            let output = ``;
+            let countdown = this.showCountdown()
+            output += `<h3>The contest application ends on <br> ${endDateOutput}</h3>`
+            output += countdown;
+            this.htmlContainer.innerHTML = output;
+        }, this.updateInterval)
     }
 }
 new Countdown('#countdown', '2019', '04', '03', '23', '42')
