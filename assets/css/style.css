@@ -24,10 +24,7 @@ body {
   color: white;
   padding: 15px;
   border-radius: 10px;
-  font-size: 1.1rem;
-  position: relative;
-  animation-duration: 2s;
-  animation-name: slideFromTop; }
+  font-size: 1.1rem; }
   #countdown h3 {
     font-family: 'Lobster', cursive;
     font-weight: normal;
@@ -75,24 +72,7 @@ body {
   padding: 15px;
   border: none;
   border-radius: 7px;
-  transition: all 1s;
-  animation-name: slideFromLeft;
-  animation-duration: 6s;
-  position: relative; }
+  transition: all 1s; }
   .apply:hover {
     color: white;
     background-color: black; }
-
-@keyframes slideFromLeft {
-  0% {
-    left: -100vw; }
-  40% {
-    left: -90vw; }
-  100% {
-    left: 0; } }
-
-@keyframes slideFromTop {
-  from {
-    top: -100vw; }
-  to {
-    top: 0; } }

@@ -7,7 +7,7 @@ class Countdown {
         this.hour = hour;
         this.minute = minute;
         this.endDate = `${year}-${month}-${day} ${hour}:${minute}`;
-        this.render();
+        setInterval(this.render(), 1000);
     }
 
     showCountdown() {

@@ -27,9 +27,6 @@ body {
     padding: 15px;
     border-radius: 10px;
     font-size: 1.1rem;
-    position: relative;
-    animation-duration: 2s;
-    animation-name: slideFromTop;
 
     h3 {
         font-family: 'Lobster', cursive;
@@ -97,9 +94,6 @@ body {
     border: none;
     border-radius: 7px;
     transition: all 1s;
-    animation-name: slideFromLeft;
-    animation-duration: 6s;
-    position: relative;
 
     &:hover {
         color: white;
