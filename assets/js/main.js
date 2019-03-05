@@ -51,4 +51,4 @@ class Countdown {
         this.htmlContainer.innerHTML = output;
     }
 }
-const currentCountdown = new Countdown('#countdown', '2019', '06', '03', '23', '42')
+new Countdown('#countdown', '2019', '06', '03', '23', '42')
