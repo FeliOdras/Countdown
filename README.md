@@ -1,17 +1,17 @@
-# Coming Soon Page
+# Coming soon Landing Page with countdown
 
-## Example
+_Countdown Page using moment.js library_
 
-![https://dribbble.com/shots/5188890-Modern-Coming-Soon-Template](./comingsoon.png)
+![Preview Image](./assets/images/CountdownLandingPage.png)
 
-> by [Leo](https://dribbble.com/flatheme)
+---
+#### **[Visit Poject Site &raquo;](https://playground.odras.de/Countdown/)**
+---
 
-## Task
+## Features
+- Countdown to set date
 
-- create a coming soon webpage
-- create a countdown
-  - should be a class
-  - accepts:
-    - selector
-    - end-date
-- for easier date handling you can use [momentjs](https://momentjs.com)
+## Technologies
+- JavaScript
+- HTML/CSS/SCSS
+- moment.js
