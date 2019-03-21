@@ -54,4 +54,4 @@ class Countdown {
         }, this.updateInterval)
     }
 }
-new Countdown('#countdown', '2019', '04', '03', '23', '42')
+new Countdown('#countdown', '2020', '04', '03', '23', '42')
