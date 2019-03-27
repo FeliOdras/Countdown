@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lobster|Space+Mono");
+@import url("https://fonts.googleapis.com/css?family=Lobster|Space+Mono|Pacifico");
 :root {
   font-size: 16px; }
 
@@ -15,7 +15,7 @@ body {
   font-family: 'Space Mono', monospace;
   text-align: center;
   background-attachment: fixed;
-  padding: 5vh 20px; }
+  padding: 5vh 0px; }
 
 #countdown {
   width: 90vw;
@@ -76,3 +76,23 @@ body {
   .apply:hover {
     color: white;
     background-color: black; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 35px;
+  background-color: #eee;
+  font-size: .7rem;
+  padding: 5px; }
+  footer .hotpink {
+    background-color: hotpink;
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 5px;
+    font-family: 'Pacifico', cursive;
+    font-size: .9rem;
+    float: right; }
+  footer a {
+    color: #222; }
